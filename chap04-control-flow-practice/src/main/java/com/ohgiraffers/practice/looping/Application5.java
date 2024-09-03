@@ -10,6 +10,10 @@ public class Application5 {
          * abcdefghijklmnopqrstuvwxyz
          * */
 
+        for (int i = 97; i<123; i++){
+            System.out.print((char)i);
+        }
+
     }
 
 }

@@ -1,5 +1,8 @@
 package com.ohgiraffers.practice.looping;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Application9 {
 
     public static void main(String[] args) {
@@ -21,7 +24,7 @@ public class Application9 {
          * 문자 입력 : p
          *
          * -- 출력 예시 --
-         * 포함된 갯수 : 1개
+         * 포함된 갯수 : 2개
          *
          * --------------------
          * -- 영문자가 아닌 문자 포함된 경우 --
@@ -31,6 +34,31 @@ public class Application9 {
          * -- 출력 예시 --
          * 영문자가 아닌 문자가 포함되어 있습니다.
          * */
+
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("문자열 입력 : ");
+        String str = sc.nextLine();
+
+        for (int i = 0; i < str.length() ; i++){
+            if ( ! ('A'<= str.toUpperCase().charAt(i) && str.toUpperCase().charAt(i)<='Z')) {
+                System.out.println("영문자가 아닌 문자가 포함되어 있습니다.");
+                return;
+            }
+        }
+
+        System.out.print("문자 입력 : ");
+        char ch = sc.nextLine().charAt(0);
+
+        int count = 0;
+
+        for (int i =0; i <str.length();i++){
+            if (ch == str.charAt(i)){
+                count++;
+            }
+        }
+
+        System.out.println("포함된 갯수 : " + count + "개");
 
     }
 

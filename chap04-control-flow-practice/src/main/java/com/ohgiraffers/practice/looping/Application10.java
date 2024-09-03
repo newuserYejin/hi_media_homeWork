@@ -1,5 +1,7 @@
 package com.ohgiraffers.practice.looping;
 
+import java.util.Scanner;
+
 public class Application10 {
 
     public static void main(String[] args) {
@@ -30,6 +32,27 @@ public class Application10 {
          * b C a
          * */
 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("문자열을 입력하세요 : ");
+        String str = sc.nextLine();
+
+        System.out.print("숫자를 입력하세요 : ");
+        int num = sc.nextInt();
+        String result = "";
+
+        for (int i =  0; i< str.length() ;i++){
+            char c = str.charAt(i);
+            if (c.i)
+            if (str.charAt(i) != ' '){
+                int ch = str.charAt(i) + num;
+                result += (char)ch;
+            } else{
+                result += " ";
+            }
+        }
+
+        System.out.println("result = " + result);
     }
 
 }

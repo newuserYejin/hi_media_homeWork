@@ -1,5 +1,7 @@
 package com.ohgiraffers.practice.looping;
 
+import java.util.Scanner;
+
 public class Application7 {
 
     public static void main(String[] args) {
@@ -20,6 +22,31 @@ public class Application7 {
          * -- 출력 예시 --
          * 소수다.
          * */
+
+        Scanner sc = new Scanner(System.in);
+
+        boolean isTrue = false;
+
+        System.out.print("2보다 큰 정수를 입력하세요: ");
+        int num = sc.nextInt();
+
+        while (num < 2) {
+            System.out.print("잘못 입력하셨습니다. 다시 입력하세요. : ");
+            num = sc.nextInt();
+        }
+
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isTrue = true;
+                break;
+            }
+        }
+        
+        if (isTrue){
+            System.out.println("소수가 아니다.");
+        } else {
+            System.out.println("소수다");
+        }
 
     }
 

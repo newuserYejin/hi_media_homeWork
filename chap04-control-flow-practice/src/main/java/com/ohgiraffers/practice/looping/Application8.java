@@ -1,5 +1,7 @@
 package com.ohgiraffers.practice.looping;
 
+import java.util.Scanner;
+
 public class Application8 {
 
     public static void main(String[] args) {
@@ -24,6 +26,32 @@ public class Application8 {
          * 정답입니다. 3회만에 정답을 맞추셨습니다.
          * */
 
+        int random = (int)(Math.random() * 100 + 1);
+
+        System.out.println("random: "+random);
+
+        int count = 0;
+
+        boolean isTry = true;
+
+        Scanner sc = new Scanner(System.in);
+
+        while (isTry){
+            System.out.print("정수를 입력하세요: ");
+            int userInt = sc.nextInt();
+
+            if (userInt > random){
+                System.out.println("입력하신 정수보다 작습니다.");
+                count ++;
+            } else if (userInt < random){
+                System.out.println("입력하신 정수보다 큽니다.");
+                count++;
+            } else {
+                isTry = false;
+            }
+        }
+
+        System.out.println("정답입니다. " + count + "회만에 정답을 맞추셨습니다.");
     }
 
 }
